@@ -123,6 +123,17 @@ body {
   margin-top: 15px;
 }
 
+.carousel-indicators {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 60px;
+  padding: 10px 0;
+  z-index: 2;
+}
+
 .dot {
   height: 14px;
   width: 14px;
@@ -306,4 +317,179 @@ footer a img {
 
 .dropdown:hover .dropdown-content {
   display: flex;
+}
+
+.burger {
+  display: none;
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+  z-index: 1001;
+}
+
+@media screen and (max-width: 768px) {
+  .burger {
+    display: block;
+  }
+
+  .header_stuff {
+    display: none;
+    flex-direction: column;
+    background-color: #e0e0e0;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    padding: 20px 0;
+    gap: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+  }
+
+  .header_stuff.show {
+    display: flex;
+  }
+
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    border: none;
+    padding: 0;
+  }
+
+  .dropdown:hover .dropdown-content {
+    display: none;
+  }
+
+  .dropdown-title::after {
+    content: " ▼";
+  }
+
+  .dropdown-title {
+    font-size: 18px;
+  }
+
+  .dropdown-content a {
+    padding: 6px 16px;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .carousel,
+  .carousel-img {
+    width: 1000px;
+    height: 420px;
+  }
+
+  .intro_text,
+  .year {
+    max-width: 900px;
+  }
+
+  .year img {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .carousel,
+  .carousel-img {
+    width: 800px;
+    height: 350px;
+  }
+
+  .intro_text {
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .year {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .year img {
+    width: 100%;
+    height: auto;
+  }
+
+  .year .text {
+    font-size: 16px;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+
+  footer p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  body {
+    padding-top: 100px;
+  }
+
+  .header {
+    padding: 15px 30px;
+  }
+
+  .logo {
+    width: 70px;
+    height: 70px;
+  }
+
+  .carousel,
+  .carousel-img {
+    width: 100%;
+    height: 250px;
+    border-radius: 0;
+  }
+
+  #prevBtn,
+  #nextBtn {
+    font-size: 28px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .intro_text {
+    margin-top: 120px;
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .gallery_dates {
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 100px;
+  }
+
+  .years a {
+    font-size: 24px;
+  }
+
+  .year {
+    gap: 20px;
+    padding: 10px;
+    margin: 20px auto;
+  }
+
+  .year .title {
+    font-size: 20px;
+  }
+
+  footer {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  footer p {
+    width: 100%;
+    font-size: 14px;
+  }
 }
