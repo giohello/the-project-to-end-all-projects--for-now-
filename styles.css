@@ -361,14 +361,6 @@ footer a img {
     display: none;
   }
 
-  .dropdown-title::after {
-    content: " ▼";
-  }
-
-  .dropdown-title {
-    font-size: 18px;
-  }
-
   .dropdown-content a {
     padding: 6px 16px;
   }
@@ -492,4 +484,9 @@ footer a img {
     width: 100%;
     font-size: 14px;
   }
+}
+
+#dropdownContent.show {
+  display: flex !important;
+  flex-direction: column;
 }
